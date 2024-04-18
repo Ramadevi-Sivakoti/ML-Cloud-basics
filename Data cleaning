@@ -1,0 +1,12 @@
+import pandas as pd
+
+# Read data from an Excel file
+df = pd.read_excel('"C:\Users\ramad\Downloads\archive (1)\Tasla_Stock_Updated_V2.csv"')
+
+#To fill missing values with the mean:
+
+df['column_name'].fillna(df['column_name'].mean(), inplace=True)
+
+#To drop rows with any missing values:
+
+df.dropna(inplace=True)
